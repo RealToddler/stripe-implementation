@@ -14,40 +14,28 @@ export default function Home() {
             alt="ipad"
             className="h-full w-1/2 rounded-l-xl"
           />
-          <div className="w-1/2 p-4 space-y-4">
+          <div className="w-1/2 p-4">
             <div className="text-center text-white text-xl">
               Ipad for sale, only $699 !
             </div>
-            <div id="billingDetails" className="space-y-4">
-              <input
-                type="text"
-                name="email"
-                id="email"
-                className="rounded bg-transparent outline-none border border-white px-2 w-[250px]"
-                placeholder="john.jones@gmail.com"
-              />
-              <input
-                type="text"
-                name="card"
-                id="cardDetails"
-                className="rounded bg-transparent outline-none border border-white px-2 w-[250px]"
-              />
+            <div className="w-full h-full flex justify-center items-center">
+              <button
+                className="text-white w-[150px] h-[80px] bg-gray-300 rounded-3xl outline-none text-xl border-2 border-gray-300
+                hover:border-white hover:bg-black transition duration-700 ease-in-out"
+                onClick={() => {
+                  checkout({
+                    lineItems: [
+                      {
+                        price: "price_1Mhv8zHtJX0yPqrtGexNaRXu",
+                        quantity: 1,
+                      },
+                    ],
+                  });
+                }}
+              >
+                Buy
+              </button>
             </div>
-            <button
-              className="text-white"
-              onClick={(() => {
-                checkout({
-                  lineItems: [
-                    {
-                      price: "price_1Mhv8zHtJX0yPqrtGexNaRXu",
-                      quantity: 1,
-                    },
-                  ],
-                });
-              })}
-            >
-              Buy
-            </button>
           </div>
         </div>
       </div>
