@@ -1,4 +1,5 @@
 import Image from "next/image";
+import checkout from "modules/stripe";
 
 export default function Home() {
   return (
@@ -32,6 +33,21 @@ export default function Home() {
                 className="rounded bg-transparent outline-none border border-white px-2 w-[250px]"
               />
             </div>
+            <button
+              className="text-white"
+              onClick={(() => {
+                checkout({
+                  lineItems: [
+                    {
+                      price: "price_1Mhv8zHtJX0yPqrtGexNaRXu",
+                      quantity: 1,
+                    },
+                  ],
+                });
+              })}
+            >
+              Buy
+            </button>
           </div>
         </div>
       </div>
