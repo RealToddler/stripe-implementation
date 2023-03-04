@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen bg-lime-400 items-center">
+    <div className="w-screen h-screen items-center">
       <div className="text-center text-7xl py-10">My Stripe Implementation</div>
       <div className="w-full flex justify-center">
-        <div className="w-[800px] h-[500px] bg-emerald-800 rounded-xl self-center flex">
+        <div className="w-[800px] h-[500px] bg-black rounded-xl self-center flex">
           <Image
             src="/ipad.png"
             height={1080}
@@ -22,14 +22,14 @@ export default function Home() {
                 type="text"
                 name="email"
                 id="email"
-                className="rounded bg-transparent outline-none border border-lime-200 px-2 w-[250px]"
+                className="rounded bg-transparent outline-none border border-white px-2 w-[250px]"
                 placeholder="john.jones@gmail.com"
               />
               <input
                 type="text"
                 name="card"
                 id="cardDetails"
-                className="rounded bg-transparent outline-none border border-lime-200 px-2 w-[250px]"
+                className="rounded bg-transparent outline-none border border-white px-2 w-[250px]"
               />
             </div>
           </div>
